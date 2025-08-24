@@ -1,0 +1,13 @@
+total 0
+drwxr-xr-x. 2 khankhel khankhel 30 Aug 21 18:09 backup
+-rw-r--r--. 1 khankhel khankhel  0 Aug 21 18:11 file_list.txt
+-rw-r--r--. 1 khankhel khankhel  0 Aug 21 18:08 notes.txt
+  File: notes.txt
+  Size: 25        	Blocks: 8          IO Block: 4096   regular file
+Device: fd02h/64770d	Inode: 33685952    Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/khankhel)   Gid: ( 1000/khankhel)
+Context: unconfined_u:object_r:user_home_t:s0
+Access: 2025-08-21 18:13:08.525372143 +0500
+Modify: 2025-08-21 18:13:03.812383243 +0500
+Change: 2025-08-21 18:13:03.812383243 +0500
+ Birth: 2025-08-21 18:08:44.514085322 +0500
