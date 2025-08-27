@@ -15,7 +15,7 @@ By the end of this lab, you will be able to:
 
 ## Files in this Lab
 - `steps.md`: Contains all the lab steps
-- `commands.sh`: Ready-to-run script of all commands
+
 
 ## Cleanup
 ```bash
