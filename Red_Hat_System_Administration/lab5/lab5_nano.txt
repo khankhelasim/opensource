@@ -1,0 +1,2 @@
+Nano is a user friendly editor.
+Uses for quick edits.

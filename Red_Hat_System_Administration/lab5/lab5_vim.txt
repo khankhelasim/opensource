@@ -1,0 +1,3 @@
+Red Hat Enterprise Linux
+Text Editing Lab
+Version 9.0
