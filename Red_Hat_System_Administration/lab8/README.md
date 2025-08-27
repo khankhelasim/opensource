@@ -16,7 +16,7 @@ By the end of this lab, you will be able to:
 
 ## Files in this Lab
 - `steps.md`: Detailed steps and expected outputs
-- `commands.sh`: All commands used in this lab
+
 
 ## Cleanup
 No cleanup is required for this lab.
