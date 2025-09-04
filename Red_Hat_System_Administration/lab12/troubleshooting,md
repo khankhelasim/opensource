@@ -1,0 +1,15 @@
+# Troubleshooting Tips
+
+- If IP changes don’t apply:
+```bash
+sudo nmcli device disconnect eth0 && sudo nmcli device connect eth0
+If DNS doesn’t work:
+
+cat /etc/resolv.conf
+dig example.com
+
+
+If no connections appear:
+
+ip link
+sudo nmcli device reapply eth0

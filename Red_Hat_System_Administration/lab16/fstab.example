@@ -1,0 +1,8 @@
+# Lab 16: Example /etc/fstab entries for NFS and CIFS
+
+# NFS Share
+127.0.0.1:/srv/nfs_share   /mnt/nfs_share   nfs   defaults,_netdev  0 0
+
+# CIFS Share
+//127.0.0.1/smbshare      /mnt/cifs_share   cifs  guest,_netdev,uid=1000,gid=1000  0 0
+

@@ -1,0 +1,17 @@
+Lab 18: SELinux Basics
+
+Key Learnings:
+- SELinux context has 4 parts: user:role:type:level
+- Type is the most important field for access control
+- Apache (httpd) can only read files labeled with httpd_sys_content_t
+- chcon changes context temporarily
+- restorecon restores defaults from policy
+- semanage fcontext makes permanent changes
+- AVC denials are logged in /var/log/audit/audit.log
+- ausearch and sealert help analyze denials
+
+Common Issues:
+- If service httpd not found → install httpd (Fedora/RHEL) or apache2 (Ubuntu)
+- If sealert not working → start setroubleshootd
+- Connection refused errors → ensure httpd/apache2 is installed and running
+
