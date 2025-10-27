@@ -54,7 +54,7 @@ echo "Backup completed at $(date)" >> ~/backups/backup_log.txt
 Make it executable:
  ```bash
 chmod +x ~/backup_script.sh
-
+```
 ✅ Expected Outcome:
 
 A functional backup script that compresses the ~/Documents folder and logs start/end times.
