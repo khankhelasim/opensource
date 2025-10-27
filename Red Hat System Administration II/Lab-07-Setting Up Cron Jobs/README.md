@@ -96,15 +96,6 @@ Field	Meaning	Range
 4	Month	1–12
 5	Day of Week	0–6 (Sun=0)
 
-Example format:
-
-* * * * * command_to_run
-┬ ┬ ┬ ┬ ┬
-│ │ │ │ └─ Day of week
-│ │ │ └─── Month
-│ │ └───── Day of month
-│ └─────── Hour
-└───────── Minute
 
 🔹 Step 2: Schedule Multiple Jobs
 
