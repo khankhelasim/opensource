@@ -16,6 +16,7 @@ By the end of this lab, you will be able to:
   *(Install with:)*  
   ```bash
   sudo dnf install at -y
+
 Basic command line familiarity
 
 ⚙️ Setup Requirements
@@ -24,27 +25,26 @@ Ensure the atd service is running:
 
 sudo systemctl enable --now atd
 
-
 Verify the installation:
 
 at -V
 
 🧩 Task 1: Scheduling a One-Time Backup Task
+
 🪣 Subtask 1.1: Create a Simple Backup Script
 
 Create a backup directory:
 
 mkdir ~/backups
 
-
 Create the backup script:
 
 nano ~/backup_script.sh
 
-
 Add the following content:
 
 #!/bin/bash
+
 echo "Backup started at $(date)" >> ~/backups/backup_log.txt
 
 tar -czf ~/backups/home_backup_$(date +%Y%m%d).tar.gz ~/Documents
@@ -55,8 +55,8 @@ Make it executable:
 
 chmod +x ~/backup_script.sh
 
-
 ✅ Expected Outcome:
+
 A functional backup script that compresses the ~/Documents folder and logs start/end times.
 
 ⏰ Subtask 1.2: Schedule the Backup with at
@@ -65,13 +65,11 @@ Schedule it to run in 5 minutes:
 
 at now + 5 minutes -f ~/backup_script.sh
 
-
 Press Ctrl + D to confirm.
 
 Verify scheduled job:
 
 atq
-
 
 ✅ Expected Output:
 
