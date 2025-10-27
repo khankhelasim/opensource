@@ -46,7 +46,9 @@ Add the following content:
 
 #!/bin/bash
 echo "Backup started at $(date)" >> ~/backups/backup_log.txt
+
 tar -czf ~/backups/home_backup_$(date +%Y%m%d).tar.gz ~/Documents
+
 echo "Backup completed at $(date)" >> ~/backups/backup_log.txt
 
 Make it executable:
