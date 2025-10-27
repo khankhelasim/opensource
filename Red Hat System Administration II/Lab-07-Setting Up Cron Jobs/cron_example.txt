@@ -1,0 +1,13 @@
+# Cron Job Examples
+
+# Run backup script daily at 2 AM
+0 2 * * * ~/backups/backup_home.sh
+
+# Run a test command every minute
+* * * * * echo "Test cron job" >> ~/cron_test.log
+
+# Weekly reminder every Monday at 5 PM
+0 17 * * 1 echo "Weekly reminder" >> ~/weekly_log.txt
+
+# Log date every 10 minutes
+*/10 * * * * date >> ~/time_log.txt
