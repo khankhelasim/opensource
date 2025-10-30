@@ -1,0 +1,29 @@
+# Verify tar installation
+tar --version
+
+# Create sample files
+mkdir lab_files && cd lab_files
+touch file1.txt file2.txt file3.txt
+echo "File 1" > file1.txt
+echo "File 2" > file2.txt
+echo "File 3" > file3.txt
+
+# Create tar archive
+tar -cvf archive.tar file1.txt file2.txt file3.txt
+
+# List files inside archive
+tar -tvf archive.tar
+
+# Compress using gzip
+gzip archive.tar
+ls -lh archive.tar.gz
+
+# Recreate and compress using bzip2
+tar -cvf archive.tar file1.txt file2.txt file3.txt
+bzip2 archive.tar
+ls -lh archive.tar.bz2
+
+# Extract files
+tar -xvf archive.tar
+tar -xzvf archive.tar.gz
+tar -xjvf archive.tar.bz2
