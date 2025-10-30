@@ -1,0 +1,14 @@
+# On client:
+logger "Test message from rsyslog client"
+
+# On server:
+sudo tail -f /var/log/remotehost/client.example.com/logger.log
+
+# Verify service status
+sudo systemctl status rsyslog
+
+# Check open ports
+sudo ss -tuln | grep 514
+
+# Optional journal check
+journalctl -f
