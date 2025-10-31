@@ -1,0 +1,9 @@
+scp --version
+rsync --version
+sudo systemctl status sshd
+sudo yum install openssh-clients openssh-server rsync -y
+echo "This is a test file" > local_file.txt
+scp local_file.txt user_name@remote_ip:/home/user_name/
+rsync -avz local_dir/ user_name@remote_ip:/home/user_name/remote_dir/
+rsync -av --delete local_dir/ backup/
+rsync -avz -e ssh local_dir/ user_name@remote_ip:/home/user_name/secure_backup/
