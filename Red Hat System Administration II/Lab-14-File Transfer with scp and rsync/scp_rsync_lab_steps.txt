@@ -1,0 +1,37 @@
+
+---
+
+### 🧾 **scp_rsync_lab_steps.txt**
+```bash
+# Lab 14: File Transfer with scp and rsync
+
+# --- Task 1: Secure File Transfer with scp ---
+echo "This is a test file" > local_file.txt
+scp local_file.txt user_name@remote_ip:/home/user_name/
+ssh user_name@remote_ip "cat /home/user_name/local_file.txt"
+
+mkdir local_dir
+touch local_dir/file{1..3}.txt
+scp -r local_dir user_name@remote_ip:/home/user_name/
+ssh user_name@remote_ip "ls -l /home/user_name/local_dir"
+
+# --- Task 2: File Synchronization with rsync ---
+echo "Updated content" >> local_dir/file1.txt
+rsync -avz local_dir/ user_name@remote_ip:/home/user_name/remote_dir/
+ssh user_name@remote_ip "ls -l /home/user_name/remote_dir"
+
+mkdir backup
+rsync -av --delete local_dir/ backup/
+echo "New line" >> local_dir/file2.txt
+rsync -av --delete local_dir/ backup/
+
+# --- Task 3: Secure rsync with SSH ---
+rsync -avz -e ssh local_dir/ user_name@remote_ip:/home/user_name/secure_backup/
+ssh user_name@remote_ip "ls -l /home/user_name/secure_backup"
+
+rsync -avz --partial --progress -e ssh large_file.iso user_name@remote_ip:/home/user_name/backups/
+rsync -avz --bwlimit=100 -e ssh local_dir/ user_name@remote_ip:/home/user_name/backups/
+
+# Cleanup
+rm -rf local_file.txt local_dir backup
+ssh user_name@remote_ip "rm -rf /home/user_name/{local_dir,remote_dir,secure_backup}"
