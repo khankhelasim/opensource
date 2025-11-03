@@ -1,0 +1,12 @@
+Lab 15 Summary: Tuning Kernel Parameters with sysctl
+
+In this lab, we learned to:
+- View and modify kernel parameters using sysctl.
+- Improve performance by tuning network and memory settings.
+- Make kernel parameter changes permanent using /etc/sysctl.conf or /etc/sysctl.d/.
+
+Key parameters:
+- vm.swappiness → controls swap usage (default 60, set to 10)
+- net.core.somaxconn → increases maximum connection backlog (set to 1024)
+- net.ipv4.tcp_fastopen → enables faster TCP connections (set to 3)
+- fs.file-max → increases maximum open file handles (set to 2097152)
