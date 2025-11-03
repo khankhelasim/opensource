@@ -1,0 +1,47 @@
+
+---
+
+### 💻 **commands.txt**
+```bash
+# Install tools
+sudo dnf install sysstat -y   # or sudo apt install sysstat -y
+
+# Check schedulers
+ls /sys/block/sd*/queue/scheduler
+for disk in /sys/block/sd*; do
+  echo "Disk: ${disk##*/}, Scheduler: $(cat $disk/queue/scheduler)"
+done
+
+# Monitor disk I/O
+iostat -x 2
+
+# Change scheduler temporarily
+echo 'mq-deadline' | sudo tee /sys/block/sda/queue/scheduler
+cat /sys/block/sda/queue/scheduler
+
+# Make scheduler persistent
+sudo nano /etc/udev/rules.d/60-io-schedulers.rules
+# Add: ACTION=="add|change", KERNEL=="sda", ATTR{queue/scheduler}="mq-deadline"
+
+# Apply udev changes
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+# Create a test file
+dd if=/dev/zero of=testfile bs=1M count=1024 conv=fdatasync
+
+# Clear cache before testing read speed
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+
+# Test read performance
+time dd if=testfile of=/dev/null bs=1M
+
+# Optional FIO tests
+fio --name=random-write --ioengine=posixaio --rw=randwrite --bs=4k --size=1g \
+    --numjobs=1 --iodepth=1 --runtime=60 --time_based --end_fsync=1
+
+fio --name=seq-read --ioengine=posixaio --rw=read --bs=1M --size=1g \
+    --numjobs=1 --iodepth=32 --runtime=60 --time_based
+
+# Cleanup
+rm testfile
