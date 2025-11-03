@@ -1,0 +1,24 @@
+Lab 17 Summary: Configuring I/O Scheduler
+
+Concepts Covered:
+- The I/O scheduler controls how Linux manages read/write requests to storage devices.
+- Different schedulers are suited to different workloads (server, desktop, SSD, etc.).
+
+Key Commands:
+- ls /sys/block/sd*/queue/scheduler → view available schedulers
+- echo 'mq-deadline' | sudo tee /sys/block/sda/queue/scheduler → temporary change
+- /etc/udev/rules.d/60-io-schedulers.rules → persistent configuration
+- iostat -x 2 → monitor I/O stats
+- dd and fio → performance testing tools
+
+Observations:
+- mq-deadline performs well on servers with predictable workloads.
+- bfq is smoother for desktops or interactive systems.
+- kyber is optimized for SSD/NVMe performance.
+- none removes scheduling overhead, good for virtual disks or RAID arrays.
+
+Conclusion:
+You learned to:
+- Inspect and change the I/O scheduler.
+- Persist configuration using udev.
+- Benchmark disk performance under different schedulers.
