@@ -1,0 +1,17 @@
+Lab 16 Summary: Adjusting CPU Scheduling with nice and renice
+
+Concepts Covered:
+- Linux uses a priority-based CPU scheduling system.
+- Each process has a “nice value” ranging from -20 (highest priority) to +19 (lowest).
+- Default nice value is 0.
+
+Commands Used:
+- nice → set priority when starting a process.
+- renice → change priority of an already running process.
+- ps -l → view process priority in NI column.
+- htop → visualize CPU usage and process priorities.
+
+Key Learnings:
+- Higher priority (negative nice) gets more CPU time.
+- Lower priority (positive nice) yields CPU to others.
+- Priority management helps improve system responsiveness and control resource usage.
