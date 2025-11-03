@@ -1,0 +1,48 @@
+
+---
+
+### 💻 **commands.txt**
+```bash
+# Update system
+sudo dnf update -y
+
+# Install monitoring tools
+sudo dnf install htop -y
+
+# Run a CPU-intensive background process
+dd if=/dev/zero of=/dev/null &
+
+# Check priority of running process
+ps -l -p $(pgrep -n dd)
+
+# Start process with custom priority
+nice -n 10 dd if=/dev/zero of=/dev/null &
+
+# Verify priority
+ps -l -p $(pgrep -n dd)
+
+# Get process ID
+pgrep -l dd
+
+# Change running process priority
+sudo renice -n 15 -p <PID>
+
+# Verify new priority
+ps -l -p <PID>
+
+# Increase priority (requires root)
+sudo renice -n -5 -p <PID>
+
+# Start htop to monitor
+htop
+
+# Create competition
+nice -n 19 dd if=/dev/zero of=/dev/null &
+nice -n -5 dd if=/dev/zero of=/dev/null &
+
+# Optional: Create system load
+sudo dnf install stress -y
+stress --cpu 4
+
+# Cleanup
+pkill dd
