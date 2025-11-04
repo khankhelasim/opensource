@@ -1,0 +1,8 @@
+Lab 20: Configuring NFS for File Sharing
+
+✔ NFS (Network File System) allows file sharing between Linux systems.
+✔ We configured one as the Server and the other as the Client.
+✔ Server exports a shared directory using /etc/exports.
+✔ Client mounts it manually and permanently via /etc/fstab.
+✔ Verified file synchronization between server and client.
+✔ Adjusted permissions, firewall, and service status for stable access.
