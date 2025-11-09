@@ -1,0 +1,14 @@
+# Notes: Lab 1 – Understanding Shell Basics
+
+- The shell interprets commands typed by the user.
+- Every command follows the pattern:
+
+command [options] [arguments]
+
+- `>` overwrites output to a file.
+- `>>` appends output to a file.
+- `<` uses file content as command input.
+- Hidden files start with a `.` (dot).
+- `~` represents the home directory.
+- `..` moves one directory up.
+- Always use `pwd` to verify your current location in the filesystem.
