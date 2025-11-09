@@ -1,0 +1,21 @@
+# Sample outputs
+
+$ pwd
+/home/user
+
+$ ls -a
+.  ..  Documents  Downloads  .bashrc
+
+$ ls -l > file_list.txt
+$ cat file_list.txt
+-rw-r--r-- 1 user user  4096 Nov  9 18:30 file_list.txt
+
+$ date >> file_list.txt
+$ cat file_list.txt
+-rw-r--r-- 1 user user  4096 Nov  9 18:30 file_list.txt
+Sat Nov  9 18:31:10 PKT 2025
+
+$ sort < names.txt
+Alice
+Bob
+Charlie
