@@ -1,0 +1,52 @@
+
+---
+
+### **commands.txt**
+```bash
+# Output Redirection
+echo "Hello, Red Hat OpenShift!" > greeting.txt
+cat greeting.txt
+echo "New content replaces old" > greeting.txt
+cat greeting.txt
+
+# Append Output
+echo "Additional line" >> greeting.txt
+echo "Line 3" >> greeting.txt
+echo "Line 4" >> greeting.txt
+cat greeting.txt
+
+# Pipes
+ls -l | grep "greeting"
+cat greeting.txt | wc -l
+ps aux | grep podman | wc -l
+cat greeting.txt | sort
+cat greeting.txt | sort > sorted_greeting.txt
+podman images | grep -v "<none>"
+
+# Error Redirection
+ls /nonexistent 2> error.log
+ls /nonexistent /etc/passwd > output.log 2> error.log
+ls /nonexistent /etc/passwd &> combined.log
+ls /nonexistent 2> /dev/null
+podman run --name testcontainer alpine /bin/false 2> container_error.log
+
+# Combined Operations
+(ls /etc/passwd /nonexistent | wc -l > success.log) 2> fail.log
+{
+  echo "=== System Report ==="
+  date
+  echo "=== Memory ==="
+  free -h
+  echo "=== Disk Usage ==="
+  df -h
+} > system_report.txt 2> system_errors.log
+
+{
+  echo "=== Container Images ==="
+  podman images
+  echo "=== Running Containers ==="
+  podman ps
+} > container_report.txt 2> container_errors.log
+
+# Lab Verification
+(echo "Lab Verification"; ls /etc/passwd | wc -l; podman images 2>/dev/null | wc -l) > verification.txt
