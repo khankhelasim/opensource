@@ -1,0 +1,43 @@
+# Sample outputs
+
+$ cat greeting.txt
+New content replaces old
+Additional line
+Line 3
+Line 4
+
+$ cat sorted_greeting.txt
+Additional line
+Line 3
+Line 4
+New content replaces old
+
+$ cat error.log
+ls: cannot access '/nonexistent': No such file or directory
+
+$ cat combined.log
+/etc/passwd
+
+$ cat success.log
+1
+
+$ cat fail.log
+ls: cannot access '/nonexistent': No such file or directory
+
+$ cat system_report.txt
+=== System Report ===
+Sat Nov 9 19:00:00 PKT 2025
+=== Memory ===
+              total        used        free      shared  buff/cache   available
+Mem:           8.0G        1.2G        5.5G        200M        1.3G        6.3G
+Swap:          2.0G          0B        2.0G
+=== Disk Usage ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        50G   20G   28G  42% /
+
+$ cat container_report.txt
+=== Container Images ===
+REPOSITORY          TAG     IMAGE ID      CREATED      SIZE
+alpine              latest  d1e2f3g4h5   2 weeks ago  5.5MB
+=== Running Containers ===
+CONTAINER ID  IMAGE   COMMAND  STATUS  PORTS  NAMES
