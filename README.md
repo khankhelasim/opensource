@@ -36,7 +36,7 @@ opensource/
 │   └── Lab20/
 └── README.md
 ```
-🚀 How to Use
+### 🚀 How to Use
 
 Clone the Repository
 ```bash
@@ -59,7 +59,7 @@ Follow the Steps
 
 Each lab README guides you step-by-step through the configuration, commands, and validation process.
 
-🧑‍💻 Learning Outcomes
+## 🧑‍💻 Learning Outcomes
 
 By completing all modules and labs, you will:
 
@@ -71,7 +71,7 @@ Develop hands-on troubleshooting and automation skills
 
 Prepare effectively for RHCSA / RHCE and DevOps fundamentals
 
-🛠️ Tools & Technologies Covered
+## 🛠️ Tools & Technologies Covered
 
 Linux (RHEL / CentOS / Fedora)
 
@@ -85,7 +85,7 @@ Networking, Storage, and SELinux
 
 NFS, Cron, Logrotate, and rsyslog
 
-🌐 Repository Link
+## 🌐 Repository Link
 
 🔗 Visit the Repository on GitHub
 
@@ -93,15 +93,15 @@ NFS, Cron, Logrotate, and rsyslog
 
 ✅ Completed:
 
-Module 1 – RHEL Administration Part 1 (20 Labs)
+### Module 1 – RHEL Administration Part 1 (20 Labs)
 
-Module 2 – RHEL Administration Part 2 (20 Labs)
+### Module 2 – RHEL Administration Part 2 (20 Labs)
 
-🕒 Upcoming:
+## 🕒 Upcoming:
 
-Module 3 – Automation & Scripting
+### Module 3 – Automation & Scripting
 
-Module 4 – DevOps with Containers & Ansible
+### Module 4 – DevOps with Containers & Ansible
 
 
 ⭐ If you find this project helpful, don’t forget to star the repo!
