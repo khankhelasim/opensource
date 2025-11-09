@@ -1,47 +1,109 @@
-# Red Hat System Administration Labs  
+# 🐧 Linux System Administration Labs (RHEL Part 1 & 2)
 
-# 🧠 Linux Administration & System Operations Labs
-
-Welcome to my **Linux System Administration Lab Series**!  
-This repository contains a complete collection of practical, step-by-step labs designed to build hands-on expertise in **Linux, SELinux, system monitoring, file management, process control, and automation**.
-
-Each lab includes clear **objectives, commands, explanations, and expected outputs** — perfect for learning, revision, and interview preparation.
+Welcome to the **Linux System Administration Lab Repository** — a complete, hands-on journey through **Red Hat Enterprise Linux (RHEL)** fundamentals and advanced administration concepts.  
+This repository is organized into **modules**, where each module contains a **series of 20 labs** that cover essential system administration tasks, automation, networking, and server management.
 
 ---
 
-## 📘 Lab Index
+## 📘 Repository Overview
 
-| No. | Lab Title | Description |
-|-----|------------|--------------|
-| 1️⃣ | **Lab 1: Basic Linux Commands** | Explore essential Linux commands for navigation, file handling, and permissions. |
-| 2️⃣ | **Lab 2: File Permissions and Ownership** | Learn how to manage users, groups, and file access rights. |
-| 3️⃣ | **Lab 3: Command Substitution** | Use `$()` and backticks to dynamically execute commands in scripts. |
-| 4️⃣ | **Lab 4: Docker Networking Basics** | Understand bridge and custom networks, and container communication. |
-| 5️⃣ | **Lab 5: Job Control** | Manage background and foreground processes with `&`, `fg`, `bg`, and `kill`. |
-| 6️⃣ | **Lab 6: Writing a Simple Dockerfile** | Build and run custom Docker images using Python-based examples. |
-| 7️⃣ | **Lab 7: Docker Compose – Multi-Container Apps** | Define and run multi-service applications using `docker-compose.yml`. |
-| 8️⃣ | **Lab 8: File Compression and Archiving** | Practice with `tar`, `gzip`, and `bzip2` for archiving and extraction. |
-| 9️⃣ | **Lab 9: System Monitoring with top and iostat** | Monitor CPU, memory, and disk I/O performance in real time. |
-| 🔟 | **Lab 10: Analyzing System Logs with journalctl** | Query, filter, and analyze logs for systemd-based systems. |
-| 11️⃣ | **Lab 11: Log Rotation with logrotate** | Configure automatic log rotation and retention for system logs. |
-| 12️⃣ | **Lab 12: Rsyslog – Centralized Logging** | Set up a centralized logging server and configure remote clients. |
-| 13️⃣ | **Lab 13: Archiving Files with tar** | Combine multiple files into single archives and extract them efficiently. |
-| 14️⃣ | **Lab 14: Rsync File Synchronization** | Synchronize files and directories across systems securely. |
-| 15️⃣ | **Lab 15: System Resource Management** | Manage CPU and memory limits using cgroups and nice values. |
-| 16️⃣ | **Lab 16: Managing Environment Files and Secrets** | Securely handle `.env` files and secrets in Podman/Docker setups. |
-| 17️⃣ | **Lab 17: Configuring I/O Scheduler** | Learn to inspect and tune disk I/O performance using different schedulers. |
-| 18️⃣ | **Lab 18: Using setenforce and semanage for SELinux** | Switch SELinux modes, manage port contexts, and handle access denials. |
-| 19️⃣ | **Lab 19: Managing Logical Volumes with LVM** | Create and manage PVs, VGs, LVs, and LVM snapshots for flexible storage. |
-| 2️⃣0️⃣ | **Lab 20: Configuring NFS for File Sharing** | Install and configure NFS server and client, export directories, and optimize for security and persistent mounting. |
+| Module | Description | Labs Count | Status |
+|:-------|:-------------|:------------:|:-------|
+| **Module 1 – RHEL Administration Part 1** | Covers Linux fundamentals, user & group management, process control, package management, and basic system services. | 20 | ✅ Completed |
+| **Module 2 – RHEL Administration Part 2** | Focuses on advanced topics including storage, SELinux, system logging, file sharing (NFS), backups, and performance tuning. | 20 | ✅ Completed |
 
----
-⭐ Support
-
-If you find this repository useful, give it a ⭐ star on GitHub — it motivates continuous learning and updates!
-
-## 🚀 Next Steps  
-Upcoming modules will include automation, and more advanced RHEL administration concepts.  
+Each lab folder includes:
+- 📄 **Objective** – What you’ll learn in the lab  
+- ⚙️ **Setup Instructions** – Steps to prepare your system/environment  
+- 💻 **Commands & Examples** – Executable commands with explanations  
+- 🧠 **Key Learnings** – Summary of important concepts
 
 ---
 
-🔗 Connect with me on [LinkedIn](https://www.linkedin.com/in/khankhelasim) to follow my learning journey.  
+## 🧩 Folder Structure
+
+```bash
+opensource/
+├── module1_RHEL_Admin_Part1/
+│   ├── Lab01/
+│   ├── Lab02/
+│   ├── ...
+│   └── Lab20/
+├── module2_RHEL_Admin_Part2/
+│   ├── Lab01/
+│   ├── Lab02/
+│   ├── ...
+│   └── Lab20/
+└── README.md
+```
+🚀 How to Use
+
+Clone the Repository
+```bash
+git clone https://github.com/khankhelasim/opensource.git
+cd opensource
+```
+
+Navigate to a Module
+```bash
+cd module1_RHEL_Admin_Part1
+```
+
+Open Any Lab
+```bash
+cd Lab10
+```
+
+
+Follow the Steps
+
+Each lab README guides you step-by-step through the configuration, commands, and validation process.
+
+🧑‍💻 Learning Outcomes
+
+By completing all modules and labs, you will:
+
+Gain proficiency in RHEL-based system administration
+
+Understand service configuration, security, and networking
+
+Develop hands-on troubleshooting and automation skills
+
+Prepare effectively for RHCSA / RHCE and DevOps fundamentals
+
+🛠️ Tools & Technologies Covered
+
+Linux (RHEL / CentOS / Fedora)
+
+Bash Scripting
+
+Systemd & Journalctl
+
+Podman / Docker (for container labs)
+
+Networking, Storage, and SELinux
+
+NFS, Cron, Logrotate, and rsyslog
+
+🌐 Repository Link
+
+🔗 Visit the Repository on GitHub
+
+📈 Progress & Next Steps
+
+✅ Completed:
+
+Module 1 – RHEL Administration Part 1 (20 Labs)
+
+Module 2 – RHEL Administration Part 2 (20 Labs)
+
+🕒 Upcoming:
+
+Module 3 – Automation & Scripting
+
+Module 4 – DevOps with Containers & Ansible
+
+
+⭐ If you find this project helpful, don’t forget to star the repo!
+
+“Practice makes a SysAdmin perfect.”
