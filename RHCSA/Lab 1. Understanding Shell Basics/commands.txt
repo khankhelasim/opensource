@@ -1,0 +1,21 @@
+# Basic Shell Commands
+ls
+ls -l
+ls -a
+pwd
+cd ~
+cd /tmp
+cd ..
+pwd
+
+# Output Redirection
+ls -l > file_list.txt
+cat file_list.txt
+
+# Append Output
+date >> file_list.txt
+cat file_list.txt
+
+# Input Redirection
+echo -e "Alice\nBob\nCharlie" > names.txt
+sort < names.txt
