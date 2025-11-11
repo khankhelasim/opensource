@@ -1,0 +1,10 @@
+
+---
+
+## 📄 **localfile.txt**
+
+A simple file for testing file transfer commands:
+
+```text
+This is a sample file created for Lab 4 - SSH and SCP practice.
+It will be used to test secure file transfers between systems.
