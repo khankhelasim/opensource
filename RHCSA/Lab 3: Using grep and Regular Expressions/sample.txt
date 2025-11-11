@@ -1,0 +1,15 @@
+
+---
+
+## 📄 **sample.txt**
+
+This file contains the sample dataset for pattern searching:
+
+```text
+apple
+banana
+cherry
+date
+elderberry
+fig
+grape
