@@ -1,0 +1,18 @@
+# Lab 4: Accessing Remote Systems with SSH
+
+# --- Task 1: Verify SSH installation and connect ---
+ssh -V
+sudo apt update && sudo apt install openssh-client -y      # (Ubuntu/Debian)
+sudo dnf install openssh-clients -y                        # (CentOS/RHEL/Fedora)
+sudo systemctl status sshd
+sudo systemctl start sshd && sudo systemctl enable sshd
+ssh username@remote_server_ip
+
+# --- Task 2: Key-based authentication ---
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-copy-id -i ~/.ssh/id_ed25519.pub username@remote_server_ip
+ssh username@remote_server_ip
+
+# --- Task 3: File transfer with scp ---
+scp localfile.txt username@remote_server_ip:/remote/directory/
+scp username@remote_server_ip:/remote/directory/remotefile.txt ~/local/directory/
