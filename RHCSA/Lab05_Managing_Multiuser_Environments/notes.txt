@@ -1,0 +1,7 @@
+Lab 5 Notes:
+
+- su - switch user and login with their environment
+- sudo - run commands as superuser or another user
+- chmod 644: owner read/write, group read, others read
+- Multiuser targets: graphical.target = GUI, multi-user.target = text
+- Podman --user sets container UID for isolation
