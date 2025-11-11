@@ -1,0 +1,50 @@
+
+---
+
+## 💻 **commands.txt**
+
+```bash
+# Lab 5: Managing Multiuser Environments
+
+# --- Task 1: Switch users ---
+su - user1
+whoami
+exit
+
+# --- Task 1.2: sudo commands ---
+cat /etc/shadow
+sudo cat /etc/shadow
+sudo -l
+sudo usermod -aG sudo yourusername
+
+# --- Task 2: File permissions ---
+su - user1
+touch ~/user1_file.txt
+echo "This is user1's file" > ~/user1_file.txt
+
+su - user2
+cat /home/user1/user1_file.txt
+ls -l /home/user1/user1_file.txt
+
+su - user1
+chmod 644 ~/user1_file.txt
+
+su - user2
+cat /home/user1/user1_file.txt
+
+# --- Task 3: Multiuser targets ---
+systemctl get-default
+sudo systemctl isolate multi-user.target
+sudo systemctl isolate graphical.target
+sudo systemctl set-default multi-user.target
+sudo systemctl start gdm   # if GUI fails
+
+# --- Advanced: Podman user ---
+podman run --user 1000 -it fedora /bin/bash
+whoami
+exit
+
+# --- Cleanup ---
+sudo userdel -r user1
+sudo userdel -r user2
+sudo systemctl set-default graphical.target
