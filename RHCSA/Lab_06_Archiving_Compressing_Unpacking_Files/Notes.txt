@@ -1,0 +1,18 @@
+Lab 6 - Archiving, Compressing, and Unpacking Files
+
+Key Commands:
+tar -cvf  → Create archive
+tar -xvf  → Extract archive
+tar -tvf  → View archive content
+gzip / bzip2 → Compress
+gunzip / bunzip2 → Decompress
+
+Common Extensions:
+.tar   → Archive only
+.tar.gz → Gzip-compressed archive
+.tar.bz2 → Bzip2-compressed archive
+
+Use Cases:
+- Combine multiple files into one for backup or transfer
+- Compress large directories to save space
+- Verify and extract archives safely
